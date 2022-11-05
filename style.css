@@ -1,0 +1,86 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-color: #14213D;
+}
+
+#logo {
+    width: calc(105px + 10vw);
+    height: 100%;
+    max-width: 210px;
+    max-height: 210px;
+    min-height: 105px;
+}
+
+[alt="logo"] {
+    border-radius: 50%;
+    height: 100%;
+}
+
+header {
+    height: calc(200px + 10vh);
+    background-color: #FCA311;
+    border: 2px ridge black;
+    border-radius: 15px;
+    max-height: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+#felso {
+    background-color: #E5E5E5;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px ridge black;
+}
+
+
+#cim {
+    padding: 0.1vh 2vw;
+}
+
+#cim h1 {
+    font-size: calc(40px + 1vh);
+    font-weight: bold;
+}
+
+#cim p {
+    font-size: calc(15px + 1vh);
+    ;
+    font-weight: normal;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: calc(15px + 1%) 0px;
+    font-size: calc(1em + 0.6vh);
+}
+nav span{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+a[href="napi.html"] span{
+    background-color: #1985A1;
+}
