@@ -1,8 +1,13 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-body{
+html, body{
     background-color: #14213D;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
 }
 
 #logo {
@@ -11,15 +16,21 @@ body{
     max-width: 210px;
     max-height: 210px;
     min-height: 105px;
+    min-width: 147px;
 }
 
 [alt="logo"] {
     border-radius: 50%;
-    height: 100%;
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin: 10% auto;
 }
 
 header {
+    margin-bottom: 0.4vw;
     height: calc(200px + 10vh);
+    min-width: 790px;
     background-color: #FCA311;
     border: 2px ridge black;
     border-radius: 15px;
@@ -57,30 +68,50 @@ header {
 nav {
     width: 100%;
     height: 100%;
-}
-
-nav ul {
-    list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0;
 }
 
-nav li {
-    display: inline-block;
+nav button {
     padding: calc(15px + 1%) 0px;
     font-size: calc(1em + 0.6vh);
-}
-nav span{
     background-color: white;
     border-radius: 15px;
     padding: 10px;
+    transition-duration: 0.2s;
 }
 a {
     text-decoration: none;
     color: #000000;
 }
-a[href="napi.html"] span{
-    background-color: #1985A1;
+a[href="napi.html"] button{
+    background-color: #14213D;
+    color: white;
+}
+a:hover, button:hover{
+    cursor: pointer;
+}
+nav button:hover{
+    background-color: #69b8cc;
+    color: white;
+    letter-spacing: 3px;
+}
+main{
+    min-height: calc(100vh - (200px + 10vh) - 3vw);
+}
+footer{
+    margin-top: auto 0;
+    background-color: #E5E5E5;
+    border-radius: 25px 25px 0 0;
+    color: black;
+    margin:0;
+    width: 100%;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
