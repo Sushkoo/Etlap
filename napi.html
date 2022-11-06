@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,49 @@
     <title>Étterem név - Napi Menü</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+
+<body id="body">
     <header>
         <div id="felso">
             <div id="logo">
-                <img src="food.png" alt="logo" width="100%">
+                <img src="kepek/food.png" alt="logo" width="100%">
             </div>
             <div id="cim">
                 <h1>Étterem név</h1>
                 <p><q>Ez az étterem mottója, sample text</q></p>
             </div>
+            <div id="ejjel-nappal" onclick="darkmode()">
+                <img src="kepek/ejjeli.ico" alt="mod" id="ejjel" class="active" title="Váltás éjjeli módra">
+                <img src="kepek/nappali.png" alt="mod" id="nappal" class="deactive" title="Váltás nappali módra">
+            </div>
         </div>
         <nav>
-            <a href=""><button>&#9750; Kezdőlap</button></a>
-            <a href="napi.html"><button>&#9728; Napi menü</button></a>
+            <a href="#fooldal"><button>&#9750; Kezdőlap</button></a>
+            <a href="#"><button>&#9728; Napi menü</button></a>
             <a href=""><button>&#127860; Ételek</button></a>
             <a href=""><button>&#129380; Italok</button></a>
             <a href=""><button>&#10004; Asztalfogalás</button></a>
             <a href=""><button>&#128222; Elérhetőség</button></a>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <section id="fooldal" class="fooldal">
+            <div class="fooldal-szoveg">
+                <h1>Köszöntjük weboldalunkon!</h1>
+                <h2>Időszámításunk előtt óta készítjük a legjobb ételeket. Mátyás király nálunk ette az első
+                    gulyáslevesét és vitrinben őrizzük Jézus asztalfoglalását. A lenti gomb tovább is visz a menühöz.
+                </h2>
+                <a class="gomb" href="#" id="napi-gomb">Napi Menü</a>
+            </div>
+            <div class="fooldal-kep">
+                <img src="kepek/kaja1.png" alt="kaja1">
+            </div>
+        </section>
+        <section>
+
+        </section>
+    </main>
     <footer>
         <ul>
             <li>|<a href="https://www.facebook.com" target="_blank">Facebook</a>|</li>
@@ -37,6 +60,10 @@
             <li>|<a href="">Támogatás</a>|</li>
         </ul>
     </footer>
+
+
     <script src="script.js"></script>
 </body>
 </html>
+
+

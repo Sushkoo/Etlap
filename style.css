@@ -1,8 +1,21 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-html, body{
-    background-color: #14213D;
+
+:root {
+    --body-bg: #14213D;
+    --header-bg: #FCA311;
+    --navbar-bg: #E5E5E5;
+    
+
+    --big-font: 3rem;
+    --h2-font: 1.6rem;
+    --p-font: 0.5rem;
+}
+
+html,
+body {
+    background-color: white;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -10,6 +23,16 @@ html, body{
     height: 100%;
 }
 
+body.active{
+    background: var(--body-bg);
+}
+
+h2{
+    font-weight: normal;
+    text-align: justify;
+}
+
+/*--------HEADER----------*/
 #logo {
     width: calc(105px + 10vw);
     height: 100%;
@@ -31,9 +54,9 @@ header {
     margin-bottom: 0.4vw;
     height: calc(200px + 10vh);
     min-width: 790px;
-    background-color: #FCA311;
+    background-color: var(--navbar-bg);
     border: 2px ridge black;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     max-height: 300px;
     min-height: 200px;
     display: flex;
@@ -41,11 +64,10 @@ header {
 }
 
 #felso {
-    background-color: #E5E5E5;
+    background-color: var(--header-bg);
     height: 70%;
     display: flex;
     flex-direction: row;
-    border-radius: 15px 15px 0 0;
     border-bottom: 1px ridge black;
 }
 
@@ -61,8 +83,24 @@ header {
 
 #cim p {
     font-size: calc(15px + 1vh);
-    ;
     font-weight: normal;
+}
+
+#ejjel-nappal {
+    margin-left: auto;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5vw;
+
+}
+#ejjel-nappal img{
+    height: 100%;
+    margin-right: 2vw;
+}
+
+#ejjel-nappal .deactive{
+    display: none;
 }
 
 nav {
@@ -82,34 +120,93 @@ nav button {
     padding: 10px;
     transition-duration: 0.2s;
 }
+
 a {
     text-decoration: none;
     color: #000000;
 }
-a[href="napi.html"] button{
+
+/*a[href="napi.html"] button{
     background-color: #14213D;
     color: white;
-}
-a:hover, button:hover{
+}*/
+a:hover,
+button:hover {
     cursor: pointer;
 }
-nav button:hover{
-    background-color: #69b8cc;
+
+nav button:hover {
+    background-color: var(--header-bg);
     color: white;
     letter-spacing: 3px;
 }
-main{
-    min-height: calc(100vh - (200px + 10vh) - 3vw);
-}
-footer{
-    margin-top: auto 0;
-    background-color: #E5E5E5;
-    border-radius: 25px 25px 0 0;
-    color: black;
-    margin:0;
+
+
+/*--------FŐ MEGJELENÍTŐ----------*/
+main {
+    min-height: calc(100vh - (200px + 10vh) - 2vw);
+    color: var(--header-bg);
     width: 100%;
 }
-footer ul{
+
+/*--------FŐOLDAL----------*/
+/*section{
+    padding: 50px 10%;
+}
+*/
+.fooldal {
+    padding: 2.5vw 0px 0px 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3vw;
+}
+
+.fooldal-szoveg h1 {
+    font-size: var(--big-font);
+    color: var(--header-bg);
+}
+
+.fooldal-szoveg h2 {
+    color: var(--header-bg);
+    font-size: var(--h2-font);
+    margin: 1rem 0 1rem;
+}
+
+.fooldal-kep img {
+    margin-top: 10%;
+    width: 80%;
+}
+
+.gomb {
+    display: inline-block;
+    background: var(--header-bg);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.gomb.active{
+    color: var(--body-bg);
+}
+
+.gomb:hover {
+    background: #ffa400;
+}
+
+
+/*--------FOOTER----------*/
+footer {
+    margin-top: auto 0;
+    background-color: var(--header-bg);
+    border-radius: 25px 25px 0 0;
+    color: black;
+    margin: 0;
+    width: 100%;
+}
+
+footer ul {
     list-style: none;
     display: flex;
     align-items: center;
