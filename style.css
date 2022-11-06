@@ -9,8 +9,8 @@
     text-decoration: none;
 }
 
-*::selection{
-    background: var(--header-bg);
+*::selection {
+    background: #df8f0e;
     color: #fff;
 }
 
@@ -18,29 +18,26 @@
     --body-bg: #14213D;
     --header-bg: #FCA311;
     --navbar-bg: #E5E5E5;
-    
+
 
     --big-font: 3rem;
     --h2-font: 1.6rem;
     --p-font: 0.5rem;
 }
 
-/*html,
+html,
 body {
-    background-color: white;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     height: 100%;
-}*/
+}
 
-body.active{
+body.active {
     background: var(--body-bg);
     color: #fff;
 }
 
-h2{
+h2 {
     font-weight: normal;
     text-align: justify;
 }
@@ -67,6 +64,7 @@ header {
     margin-bottom: 0.4vw;
     height: calc(200px + 10vh);
     min-width: 790px;
+    width: 100%;
     background-color: var(--navbar-bg);
     border: 2px ridge black;
     border-radius: 0 0 15px 15px;
@@ -74,6 +72,9 @@ header {
     min-height: 200px;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 #felso {
@@ -90,11 +91,13 @@ header {
 }
 
 #cim h1 {
+    margin-top: 4vh;
     font-size: calc(40px + 1vh);
     font-weight: bold;
 }
 
 #cim p {
+    margin-top: 2vh;
     font-size: calc(15px + 1vh);
     font-weight: normal;
 }
@@ -107,14 +110,16 @@ header {
     margin-top: 2.5vw;
     cursor: pointer;
 }
-#ejjel-nappal img{
+
+#ejjel-nappal img {
     height: 100%;
     margin-right: 2vw;
 }
 
-#ejjel-nappal .deactive{
+#ejjel-nappal .deactive {
     display: none;
 }
+
 
 nav {
     width: 100%;
@@ -156,15 +161,22 @@ nav button:hover {
 
 
 /*--------FŐ MEGJELENÍTŐ----------*/
-/*main {
+main {
+    margin-top: 200px;
     min-height: calc(100vh - (200px + 10vh) - 2vw);
     color: var(--header-bg);
     width: 100%;
-}*/
+}
+
+#elso, #masodik, #harmadik, #negyedik, #otodik, #hatodik{
+    color: white;
+}
 
 /*--------FŐOLDAL----------*/
-section{
+section {
     padding: 50px 10%;
+    min-height: 70vh;
+    border-bottom: 2px groove var(--header-bg);
 }
 
 .fooldal {
@@ -200,7 +212,7 @@ section{
     padding: 0.5rem;
 }
 
-.gomb.active{
+.gomb.active {
     color: var(--body-bg);
 }
 
@@ -209,75 +221,143 @@ section{
     cursor: pointer;
 }
 
-.fejlec{
+.fejlec {
     text-align: center;
 }
 
-.fejlec span{
+.fejlec h1 {
     color: var(--header-bg);
     font-weight: 500;
+    font-size: var(--big-font);
 }
 
-.fejlec h2{
+.fejlec h2 {
     font-size: var(--h2-font);
     color: var(--header-bg);
     text-align: center;
 }
 
-.etlap-container{
+
+#etlap-container {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
     align-items: center;
 }
 
-.box{
+.box {
     position: relative;
     margin-top: 2rem;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
     padding: 10px;
+    height: 35vh;
+    width: 15vw;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
 }
 
-.box-img{
-    width: 200px;
-    height: 200px;
+.box img {
+    width: 75%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    margin-bottom: 0.3vw;
 }
 
-.box-img img{
-    width: 90%;
-    height: 90%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.box h2{
+.box h2 {
     font-size: 1.2rem;
+    text-align: center;
 }
 
-.box h3{
+.box h3 {
     font-size: 1rem;
     font-weight: 400;
     margin: 4px 0 10px;
 }
 
-.box span{
-    font-size: var(--p-font);
+.box h4 {
     font-weight: 500;
+}
+
+.box:before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border: 3px solid transparent;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.box:after {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border: 3px solid transparent;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.box:hover:before {
+    height: 35vh;
+    width: 15vw;
+    border: 3px solid var(--header-bg);
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.5s linear,
+        width 0.5s linear 0.5s;
+}
+
+.box:hover:after {
+    height: 35vh;
+    width: 15vw;
+    border: 3px solid var(--header-bg);
+    border-left: none;
+    border-top: none;
+    transition: height 0.5s linear,
+        width 0.5s linear 0.5s;
+}
+
+/*.box:hover{
+    border: 3px solid;
+    border-color: var(--header-bg);
+}*/
+
+.urlap-box{
+    position: relative;
+    height: 420px;
+    width: 380px;
+    background: rgb(253, 253, 253);
+    border-radius: 8px;
+}
+
+.urlap-box::before{
+    content: '';
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, transparent, var(--header-bg));
+    animation: animate 6s linear infinite;
+}
+
+#asztal{
+    border: none;
 }
 
 /*--------FOOTER----------*/
 footer {
-    margin-top: auto 0;
+    font-size: 1.3em;
+    height: calc(3vh + 2%);
+    padding: 1vh;
+    margin: auto 0;
     background-color: var(--header-bg);
     border-radius: 25px 25px 0 0;
     color: black;
-    margin: 0;
     width: 100%;
 }
 

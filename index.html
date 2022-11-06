@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étterem név - Napi Menü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body id="body">
+    <span id="elso">.</span>
+    <header>
+        <div id="felso">
+            <div id="logo">
+                <img src="kepek/food.png" alt="logo" width="100%">
+            </div>
+            <div id="cim">
+                <h1>Étterem név</h1>
+                <p><q>Ez az étterem mottója, sample text</q></p>
+            </div>
+            <div id="ejjel-nappal" onclick="darkmode()">
+                <img src="kepek/ejjeli.ico" alt="mod" id="ejjel" class="active" title="Váltás éjjeli módra">
+                <img src="kepek/nappali.png" alt="mod" id="nappal" class="deactive" title="Váltás nappali módra">
+            </div>
+        </div>
+        <nav>
+            <a href="#elso"><button>&#9750; Kezdőlap</button></a>
+            <a href="#masodik"><button>&#9728; Napi menü</button></a>
+            <a href="#harmadik"><button>&#127860; Ételek</button></a>
+            <a href="#negyedik"><button>&#129380; Italok</button></a>
+            <a href="#otodik"><button>&#10004; Asztalfogalás</button></a>
+            <a href=""><button>&#128222; Elérhetőség</button></a>
+        </nav>
+    </header>
+    
+    
+    <main>
+        <section id="fooldal" class="fooldal">
+            <div class="fooldal-szoveg">
+                <h1>Köszöntjük weboldalunkon!</h1>
+                <h2>Időszámításunk előtt óta készítjük a legjobb ételeket. Mátyás király nálunk ette az első
+                    gulyáslevesét és vitrinben őrizzük Jézus asztalfoglalását. A lenti gomb tovább is visz a menühöz.
+                </h2>
+                <a class="gomb" href="#elso" id="napi-gomb">Napi Menü</a>
+            </div>
+            <div class="fooldal-kep">
+                <img src="kepek/kaja1.png" alt="kaja1">
+            </div>
+        </section>
+        
+        
+        <!--<section id="napimenu"></section>-->
+        
+        
+        <span id="harmadik">.</span>
+        <section id="kajak" class="kajak">
+            <div class="fejlec">
+                <h1>Étlap</h1>
+                <h2>A legjobb ételek időszámításunk előtt óta!</h2>
+            </div>
+            <div id="etlap-container">
+                <div class="box" id="krumpli">
+                    <img src="kepek/krumpli.png" alt="krumpli">
+                    <h2>Sültkrumpli</h2>
+                    <h3>Egy adag sültkrumpli</h3>
+                    <h4>999 HUF</h4>
+                </div>
+                <div class="box" id="gulyasleves">
+                    <img src="kepek/gulyas.png" alt="gulyásleves">
+                    <h2>Gulyásleves</h2>
+                    <h3>Egy magyar különlegesség</h3>
+                    <h4>2499 HUF</h4>
+                </div>
+                <div class="box" id="kacsamajas">
+                    <img src="kepek/kacsamajas.png" alt="kacsamájas">
+                    <h2>Kacsamájas<span id="negyedik">.</span></h2>
+                    <h3>Kacsamájas</h3>
+                    <h4>699 HUF</h4>
+                </div>
+                <div class="box" id="husosvalami">
+                    <img src="kepek/husosvalami.png" alt="húsos valami">
+                    <h2>Hús valamivel</h2>
+                    <h3>Egy hús valamivel</h3>
+                    <h4>4999 HUF</h4>
+                </div>
+            </div>
+        </section>
+        
+        <section id="italok" class="italok">
+            <div class="fejlec">
+                <h1>Itallap</h1>
+                <h2>Éttermünk italkínálata</h2>
+            </div>
+            <div id="etlap-container">
+                <div class="box" id="ital1">
+                    <img src="kepek/ital1.png" alt="Somersby">
+                    <h2>Somersby</h2>
+                    <h3>Somersby 0,25l</h3>
+                    <h4>499 HUF</h4>
+                </div>
+                <div class="box" id="ital2">
+                    <img src="kepek/ital2.png" alt="koktél1" style="width: 60%;">
+                    <h2>Valamilyen koktél</h2>
+                    <h3>Valami koktél</h3>
+                    <h4>3599 HUF</h4>
+                </div>
+                <div class="box" id="ital3">
+                    <img src="kepek/ital3.png" alt="koktél2">
+                    <h2>Koktél</h2>
+                    <h3>Koktél nem tudom milyen</h3>
+                    <h4>4499 HUF</h4>
+                </div>
+                <div class="box" id="ital4">
+                    <img src="kepek/ital4.png" alt="almalé">
+                    <h2>Almalé</h2>
+                    <h3>Csóró almalé</h3>
+                    <h4>5 HUF</h4>
+                </div>
+            </div>
+        </section>
+        
+        <span id="otodik">f</span>
+        <section id="asztal" class="asztal">
+            <div class="fejlec">
+                <h1>Asztalfogalalás</h1>
+                <h2>Menj biztosra, foglalj asztalt! </h2>
+            </div>
+            
+            <div id="urlap-box">
+                <div class="urlap" id="urlap">
+                <form action="">
+                    <h3>Kérem, adja meg az adatokat:</h3>
+                    <label for="nev">Név: </label>
+                    <input type="text" name="nev" id="nev"><br>
+                    <label for="varos">Város: </label>
+                    <input type="text" name="varos" id="varos"><br>
+                    <label for="cim">Cím: </label>
+                    <input type="text" name="cim" id="cim" placeholder="Pl.: Valami u. 69."><br>
+                    <label for="tele">Telefonszám: </label>
+                    <input type="text" name="tele" id="tele" placeholder="Pl.: +36 20 123 4567"><br>
+                    
+                    <h3>Mikorra szeretne fogalalni?</h3>
+                    <label for="datum">Dátum: </label>
+                    <input type="date" name="datum" id="datum"><br>
+                    <label for="idopont">Időpont: </label>
+                    <input type="time" name="idopont" id="idopont"><br>
+
+                    <h3>Hány személyre szeretne foglalni?</h3>
+                    <select name="letszam" id="letszam">
+                        <option value="ketto">2 személyre</option>
+                        <option value="harom">3 személyre</option>
+                        <option value="negy" selected>4 személyre</option>
+                        <option value="hat">6 személyre</option>
+                        <option value="nyolc">8 személyre</option>
+                    </select>
+                </form>
+            </div>
+            </div>
+            
+        </section>
+
+    </main>
+
+
+
+
+
+    <footer>
+        <ul>
+            <li>|<a href="https://www.facebook.com" target="_blank">Facebook</a>|</li>
+            <li>|<a href="https://www.discord.com/app" target="_blank">Discord</a>|</li>
+            <li>|<a href="">Jogi nyilatkozatok</a>|</li>
+            <li>|<a href="">Impresszum</a>|</li>
+            <li>|<a href="">Támogatás</a>|</li>
+        </ul>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
