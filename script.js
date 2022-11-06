@@ -21,3 +21,9 @@ function darkmode(){
 //Scroll
 //ScrollReveal().reveal('.fooldal-szoveg, .fooldal-kep, .gomb', {delay: 200, easing: "eas-out", interval: 200, scale: 1.2})
 
+//asztalok
+
+setInterval(function(){
+    var t = Math.round(Math.random() * (21));
+    document.getElementById("lefoglalahato").innerHTML = t;
+ }, 1000);

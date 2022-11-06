@@ -35,8 +35,8 @@
             <a href=""><button>&#128222; Elérhetőség</button></a>
         </nav>
     </header>
-    
-    
+
+
     <main>
         <section id="fooldal" class="fooldal">
             <div class="fooldal-szoveg">
@@ -50,11 +50,11 @@
                 <img src="kepek/kaja1.png" alt="kaja1">
             </div>
         </section>
-        
-        
+
+
         <!--<section id="napimenu"></section>-->
-        
-        
+
+
         <span id="harmadik">.</span>
         <section id="kajak" class="kajak">
             <div class="fejlec">
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="italok" class="italok">
             <div class="fejlec">
                 <h1>Itallap</h1>
@@ -121,45 +121,70 @@
                 </div>
             </div>
         </section>
-        
+
         <span id="otodik">f</span>
         <section id="asztal" class="asztal">
             <div class="fejlec">
                 <h1>Asztalfogalalás</h1>
-                <h2>Menj biztosra, foglalj asztalt! </h2>
+                <h2>Menj biztosra, foglalj asztalt! Lefoglalható asztalok: <span id="lefoglalhato"></span></h2>
             </div>
-            
-            <div id="urlap-box">
-                <div class="urlap" id="urlap">
-                <form action="">
-                    <h3>Kérem, adja meg az adatokat:</h3>
-                    <label for="nev">Név: </label>
-                    <input type="text" name="nev" id="nev"><br>
-                    <label for="varos">Város: </label>
-                    <input type="text" name="varos" id="varos"><br>
-                    <label for="cim">Cím: </label>
-                    <input type="text" name="cim" id="cim" placeholder="Pl.: Valami u. 69."><br>
-                    <label for="tele">Telefonszám: </label>
-                    <input type="text" name="tele" id="tele" placeholder="Pl.: +36 20 123 4567"><br>
-                    
-                    <h3>Mikorra szeretne fogalalni?</h3>
-                    <label for="datum">Dátum: </label>
-                    <input type="date" name="datum" id="datum"><br>
-                    <label for="idopont">Időpont: </label>
-                    <input type="time" name="idopont" id="idopont"><br>
 
-                    <h3>Hány személyre szeretne foglalni?</h3>
-                    <select name="letszam" id="letszam">
-                        <option value="ketto">2 személyre</option>
-                        <option value="harom">3 személyre</option>
-                        <option value="negy" selected>4 személyre</option>
-                        <option value="hat">6 személyre</option>
-                        <option value="nyolc">8 személyre</option>
-                    </select>
+            <div id="urlap-box">
+                <form action="">
+
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <h3>Kérem, adja meg az adatokat:</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="text" name="nev" id="nev" placeholder="Teljes név*"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" name="email" id="email" placeholder="E-mail*"></td>
+                            <td><input type="tel" name="tele" id="tele" placeholder=" Telefonszám"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="tele" id="tele" placeholder="Üzenet"></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <h3>Mikorra szeretne fogalalni?</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="date" name="datum" id="datum"></td>
+                            <td><input type="time" name="idopont" id="idopont"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h3>Hány személyre szeretne foglalni?</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <select name="letszam" id="letszam">
+                                    <option value="ketto">2 személyre</option>
+                                    <option value="harom">3 személyre</option>
+                                    <option value="negy" selected>4 személyre</option>
+                                    <option value="hat">6 személyre</option>
+                                    <option value="nyolc">8 személyre</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                    
                 </form>
             </div>
-            </div>
-            
+            <button type="button" class="lefoglalom">Lefogalom</button>
         </section>
 
     </main>
