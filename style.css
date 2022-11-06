@@ -1,5 +1,17 @@
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+*::selection{
+    background: var(--header-bg);
+    color: #fff;
 }
 
 :root {
@@ -13,7 +25,7 @@
     --p-font: 0.5rem;
 }
 
-html,
+/*html,
 body {
     background-color: white;
     margin: 0;
@@ -21,10 +33,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     height: 100%;
-}
+}*/
 
 body.active{
     background: var(--body-bg);
+    color: #fff;
 }
 
 h2{
@@ -92,7 +105,7 @@ header {
     display: flex;
     align-items: center;
     margin-top: 2.5vw;
-
+    cursor: pointer;
 }
 #ejjel-nappal img{
     height: 100%;
@@ -143,17 +156,17 @@ nav button:hover {
 
 
 /*--------FŐ MEGJELENÍTŐ----------*/
-main {
+/*main {
     min-height: calc(100vh - (200px + 10vh) - 2vw);
     color: var(--header-bg);
     width: 100%;
-}
+}*/
 
 /*--------FŐOLDAL----------*/
-/*section{
+section{
     padding: 50px 10%;
 }
-*/
+
 .fooldal {
     padding: 2.5vw 0px 0px 10%;
     display: grid;
@@ -193,8 +206,70 @@ main {
 
 .gomb:hover {
     background: #ffa400;
+    cursor: pointer;
 }
 
+.fejlec{
+    text-align: center;
+}
+
+.fejlec span{
+    color: var(--header-bg);
+    font-weight: 500;
+}
+
+.fejlec h2{
+    font-size: var(--h2-font);
+    color: var(--header-bg);
+    text-align: center;
+}
+
+.etlap-container{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    margin-top: 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
+    padding: 10px;
+}
+
+.box-img{
+    width: 200px;
+    height: 200px;
+}
+
+.box-img img{
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.box h2{
+    font-size: 1.2rem;
+}
+
+.box h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+
+.box span{
+    font-size: var(--p-font);
+    font-weight: 500;
+}
 
 /*--------FOOTER----------*/
 footer {
