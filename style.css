@@ -16,13 +16,13 @@
 
 :root {
     --body-bg: #14213D;
-    --header-bg: #FCA311;
+    --header-bg: #ffa400;
     --navbar-bg: #E5E5E5;
 
 
     --big-font: 3rem;
     --h2-font: 1.6rem;
-    --p-font: 0.5rem;
+    --p-font: 1rem;
 }
 
 html,
@@ -230,6 +230,26 @@ section {
     background: #ffa400;
     cursor: pointer;
 }
+/*--------NAPI MENÜ----------*/
+
+.napimenu-alap{
+    display: flex;
+    flex-direction: row;
+    margin: 5vh auto;
+    padding: 1vw;
+    width: 85%;
+    height: 50vh;
+    background-color: #FAC57E;
+    border-radius: 20px;
+    box-shadow: 0.3vw 0.5vw 10px rgba(0, 0, 0, 0.2);
+}
+.napi-oszlop-bal{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 20%;
+    background-color: #FFA400;
+}
+
 
 /*--------TÖBBI----------*/
 .fejlec {
@@ -381,12 +401,6 @@ button.lefoglalom:hover{
     margin-top: 0px;
 }
 
-.elerhetoseg{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .elerhetoseg h1{
     text-align: center;
     font-size: var(--big-font);
@@ -401,14 +415,25 @@ button.lefoglalom:hover{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     padding-top: 3rem;
     gap: 10rem;
 }
+.elerhetoseg-text{
+    height: 100%;
+    border: 2px solid var(--header-bg);
+    border-radius: 5px;
+}
 
-.telefon p, .email p{
+.elerhetoseg-text p{
+    padding: 3rem 3rem 0 3rem;
     font-size: var(--p-font);
+}
+
+.elerhetoseg-text p:last-child{
     padding-bottom: 3rem;
 }
+
 iframe{
     border-radius: 10px;
 }
