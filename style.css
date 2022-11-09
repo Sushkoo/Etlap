@@ -1,3 +1,548 @@
+<<<<<<< HEAD
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+*::selection {
+    background: #df8f0e;
+    color: #fff;
+}
+
+:root {
+    --body-bg: #14213D;
+    --header-bg: #ffa400;
+    --navbar-bg: #E5E5E5;
+
+
+    --big-font: 3rem;
+    --h2-font: 1.6rem;
+    --p-font: 1rem;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+body.active {
+    background: var(--body-bg);
+    color: #fff;
+}
+
+h2 {
+    font-weight: normal;
+    text-align: justify;
+}
+
+/*--------HEADER----------*/
+#logo {
+    width: 15vw;
+    height: 100%;
+    max-width: 210px;
+    max-height: 210px;
+    min-height: 105px;
+    min-width: 147px;
+    border-radius: 100px;
+}
+
+[alt="logo"] {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    display: block;
+    margin: 10% auto;
+    transition: 0.2s;
+}
+[alt="logo"]:hover{
+    background-color: var(--navbar-bg);
+}
+
+header {
+    margin-bottom: 0.4vw;
+    height: 30vh;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    border: 2px ridge black;
+    border-radius: 0 0 15px 15px;
+    max-height: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+#felso {
+    background-color: var(--header-bg);
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px ridge black;
+}
+
+
+#cim {
+    padding: 0.1vh 2vw;
+}
+
+#cim h1 {
+    margin-top: 4vh;
+    font-size: calc(40px + 1vh);
+    font-weight: bold;
+}
+
+#cim p {
+    margin-top: 2vh;
+    font-size: calc(15px + 1vh);
+    font-weight: normal;
+}
+
+#ejjel-nappal {
+    margin-left: auto;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 2.5vw;
+    cursor: pointer;
+}
+
+#ejjel-nappal img {
+    height: 100%;
+    margin-right: 2vw;
+}
+
+#ejjel-nappal .deactive {
+    display: none;
+}
+.deactive{
+    color: #fff;
+}
+
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+#nav-hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+nav button {
+    padding: calc(15px + 1%) 0px;
+    font-size: calc(1em + 0.6vh);
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    transition-duration: 0.2s;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/*a[href="napi.html"] button{
+    background-color: #14213D;
+    color: white;
+}*/
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: var(--header-bg);
+    color: white;
+    letter-spacing: 3px;
+}
+
+
+/*--------FŐ MEGJELENÍTŐ----------*/
+main {
+    margin-top: 200px;
+    min-height: calc(100vh - (200px + 10vh) - 2vw);
+    color: var(--header-bg);
+    width: 100%;
+}
+
+#elso, #masodik, #harmadik, #negyedik, #otodik, #hatodik{
+    color: white;
+}
+
+/*--------FŐOLDAL----------*/
+section {
+    padding: 50px 10%;
+    min-height: 70vh;
+    border-bottom: 2px groove var(--header-bg);
+}
+
+.fooldal {
+    padding: 2.5vw 0px 0px 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3vw;
+}
+
+.fooldal-szoveg h1 {
+    font-size: var(--big-font);
+    color: var(--header-bg);
+}
+
+.fooldal-szoveg h2 {
+    color: var(--header-bg);
+    font-size: var(--h2-font);
+    margin: 1rem 0 1rem;
+}
+
+.fooldal-kep img {
+    margin-top: 10%;
+    width: 80%;
+}
+
+.gomb {
+    display: inline-block;
+    background: var(--header-bg);
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.active {
+    color: var(--body-bg);
+}
+
+.gomb:hover {
+    background: #ffa400;
+    cursor: pointer;
+}
+/*--------NAPI MENÜ----------*/
+
+.napimenu-alap{
+    display: flex;
+    flex-direction: row;
+    margin: 5vh auto;
+    padding: 1vw;
+    width: 85%;
+    height: 50vh;
+    background-color: #FAC57E;
+    border-radius: 20px;
+    box-shadow: 0.3vw 0.5vw 10px rgba(0, 0, 0, 0.2);
+}
+.napi-oszlop-bal{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 20%;
+    background-color: #FFA400;
+}
+
+
+/*--------TÖBBI----------*/
+.fejlec {
+    text-align: center;
+}
+
+.fejlec h1 {
+    color: var(--header-bg);
+    font-weight: 500;
+    font-size: var(--big-font);
+}
+
+.fejlec h2 {
+    font-size: var(--h2-font);
+    color: var(--header-bg);
+    text-align: center;
+}
+
+
+#etlap-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgb(4 64 54 / 10%);
+    padding: 10px;
+    height: 35vh;
+    width: 15vw;
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+}
+
+.box img {
+    width: 75%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    margin-bottom: 0.3vw;
+}
+
+.box h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.box h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 4px 0 10px;
+}
+
+.box h4 {
+    font-weight: 500;
+}
+
+.box:before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border: 3px solid transparent;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.box:after {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    border: 3px solid transparent;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.box:hover:before {
+    height: 35vh;
+    width: 15vw;
+    border: 3px solid var(--header-bg);
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.5s linear,
+        width 0.5s linear 0.5s;
+}
+
+.box:hover:after {
+    height: 35vh;
+    width: 15vw;
+    border: 3px solid var(--header-bg);
+    border-left: none;
+    border-top: none;
+    transition: height 0.5s linear,
+        width 0.5s linear 0.5s;
+}
+
+/*.box:hover{
+    border: 3px solid;
+    border-color: var(--header-bg);
+}*/
+
+/*--------ASZTALFOGALALÁS----------*/
+
+#lefoglalhato{
+    background-color: sandybrown;
+    border-radius: 10px;
+    padding: 0px 5px;
+    border: 1px solid sienna;
+}
+
+#urlap-box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#urlap-box table{
+    margin-left: 0px;
+    float: left;
+    margin: 3vw;
+    border-spacing: 10px;
+    border-radius: 30px 0px;
+    border: 1px solid black;
+    padding: 2vw;
+}
+button.lefoglalom{
+    margin: 0.5vh auto;
+    display: block;
+    width: 10vw;
+    height: 5vh;
+    font-size: 1vw;
+    background-color: var(--navbar-bg);
+    border: 2px solid var(--header-bg);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+button.lefoglalom:hover{
+    background-color: var(--header-bg);
+    color: #fff;
+    width: 12vw;
+    height: 6vh;
+    margin-top: 0px;
+}
+
+.elerhetoseg h1{
+    text-align: center;
+    font-size: var(--big-font);
+}
+
+.elerhetoseg h2{
+    text-align: center;
+    font-size: var(--h2-font);
+}
+
+.elerhetoseg-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 3rem;
+    gap: 10rem;
+}
+.elerhetoseg-text{
+    height: 100%;
+    border: 2px solid var(--header-bg);
+    border-radius: 5px;
+}
+
+.elerhetoseg-text p{
+    padding: 3rem 3rem 0 3rem;
+    font-size: var(--p-font);
+}
+
+.elerhetoseg-text p:last-child{
+    padding-bottom: 3rem;
+}
+
+iframe{
+    border-radius: 10px;
+}
+#elerhetoseg{
+    border: none;
+}
+
+/*--------FOOTER----------*/
+footer {
+    font-size: 1.3em;
+    height: calc(3vh + 2%);
+    padding: 1vh;
+    margin: auto 0;
+    background-color: var(--header-bg);
+    border-radius: 25px 25px 0 0;
+    color: black;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer a[href*="facebook"]{
+    color: #fff;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/*TODO reszponziv navbar javitása */
+
+@media only screen and (min-width: 600px){
+    :root{
+        --big-font: 4rem;
+        --h2-font: 1.7rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+    :root{
+        --big-font: 2rem;
+        --h2-font: 1.4rem;
+    }
+
+    section{
+        padding: 50px 8%;
+    }
+
+    #nav-hamburger{
+        display: initial;
+        padding-left: 40vw;
+        font-size: 2rem;
+        color: var(--text-color);
+    }
+
+    header nav{
+        display: none;
+    }
+
+    #navbar.active{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: var(--bg-color);
+        box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+        transition: 0.2s ease;
+    }
+
+    #navbar a{
+        padding: 1.5rem;
+        display: block;
+        background: var(--bg-color);
+    }
+
+    .fooldal{
+        grid-template-columns: 1fr;
+    }
+
+    .fooldal-szoveg{
+        padding-top: 4rem;
+    }
+
+    /*TODO rólunk fül*/
+    .rolunk{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .rolunk-kep{
+        order: 2;
+    }
+
+    /*TODO étlap, itallap, asztalfoglalás, kapcsolatfelvétel, footer reszponzivitás (túl kajás voltam hogy befejezzem)*/
+=======
 * {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
@@ -465,4 +1010,5 @@ footer a[href*="facebook"]{
     background-color: cornflowerblue;
     border-radius: 10px;
     padding: 2px;
+>>>>>>> 359fa2f03c3c1731034bcf5735608325ceb33215
 }
