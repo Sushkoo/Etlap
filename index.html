@@ -13,30 +13,41 @@
 <body id="body">
     <span id="elso">.</span>
     <header>
-        <div id="felso">
-            <div id="logo">
-                <a href="index.html#elso"><img src="kepek/logo.png" alt="logo" title="Vissza az oldal tetejére"></a>
-            </div>
-            <div id="cim">
+        <div id="logo">
+            <a href="index.html#elso"><img src="kepek/logo.png" alt="logo" title="Vissza az oldal tetejére"></a>
+        </div>
+        <div id="cim">
                 <h1>Trójai Faló</h1>
                 <p><i><q>Holnap nagykanállal eszünk</q></i></p>
             </div>
-            <div id="ejjel-nappal" onclick="darkmode()">
-                <img src="kepek/ejjeli.ico" alt="mod" id="ejjel" class="active" title="Váltás éjjeli módra">
-                <img src="kepek/nappali.png" alt="mod" id="nappal" class="deactive" title="Váltás nappali módra">
-            </div>
+        <div id="ejjel-nappal">
+            <img src="kepek/ejjeli.ico" alt="mod" id="ejjel" class="active" title="Váltás éjjeli módra"  onclick="darkmode()">
+            <img src="kepek/nappali.png" alt="mod" id="nappal" class="deactive" title="Váltás nappali módra"  onclick="darkmode()">
         </div>
-        <nav id="navbar">
-            <a href="#elso" onclick="resetnav()"><button>&#9750; Kezdőlap</button></a>
-            <a href="#masodik" onclick="resetnav()"><button>&#9728; Napi menü</button></a>
-            <a href="#harmadik" onclick="resetnav()"><button>&#127860; Ételek</button></a>
-            <a href="#negyedik" onclick="resetnav()"><button>&#129380; Italok</button></a>
-            <a href="#otodik" onclick="resetnav()"><button>&#10004; Asztalfogalás</button></a>
-            <a href="#hatodik" onclick="resetnav()"><button>&#128222; Elérhetőség</button></a>
-            <a href="#" onclick="resetnav()"><img src="https://img.icons8.com/ios-filled/50/null/menu-rounded.png" id="nav-hamburger"/></a>
-        </nav>
+        <ul class="navbar" id="navbar">
+            <li><a href="#elso" onclick="resetnav()">&#9750; Kezdőlap</a></li>
+            <li><a href="#napimenu" onclick="resetnav()">&#9728; Napi menü</a></li>
+            <li><a href="#kajak" onclick="resetnav()">&#127860; Ételek</a></li>
+            <li><a href="#italok" onclick="resetnav()">&#129380; Italok</a></li>
+            <li><a href="#asztal" onclick="resetnav()">&#10004; Asztalfogalás</a></li>
+            <li><a href="#elerhetoseg" onclick="resetnav()">&#128222; Elérhetőség</a></li>
+            
+        </ul>
+        <div id="nav-hamburger"><a onclick="navresp()"><img src="https://img.icons8.com/ios-filled/50/null/menu-rounded.png"/></a></div>
+    </header>
+    <!--
+    <header id="header">
+        <div id="felso">
+            
+            
+            
+        </div>
+            <ul id="navbar">
+                
+            </ul>
         <a href="#" onclick="navresp()"><img src="https://img.icons8.com/ios-filled/50/null/menu-rounded.png" id="nav-hamburger"/></a>
     </header>
+    -->
 
 
     <main>
@@ -46,7 +57,7 @@
                 <h2>Időszámításunk előtt óta készítjük a legjobb ételeket. Mátyás király nálunk ette az első
                     gulyáslevesét és vitrinben őrizzük Jézus asztalfoglalását. A lenti gomb tovább is visz a menühöz.
                 </h2>
-                <a class="gomb" href="#elso" id="napi-gomb">Napi Menü</a>
+                <a class="gomb" href="#napimenu" id="napi-gomb">Napi Menü</a>
             </div>
             <div class="fooldal-kep">
                 <img src="kepek/kaja1.png" alt="kaja1">
@@ -69,28 +80,100 @@
                 </div>
                 <div class="napi-oszlop-jobb">
                     <div class="napi-sor">
-                        <div class="napi-kaja">Löncshús</div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Gulyásleves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Paradicsomleves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Kaktusz leves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Kolis leves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Krumplileves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Lebbencsleves</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
                     </div>
                     <div class="napi-sor">
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Fél disznó</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Pacalpörkölt</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Harcsapaprikás</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Surtrömming</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Cigánypecsenye</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Pizza</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
                     </div>
                     <div class="napi-sor">
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
-                        <div class="napi-kaja"></div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Sacher torta</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Gesztenyés angyalbögyörő</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Almáspite</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Gundelpalacsinta</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Gundelpalacsinta</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
+                        <div class="napi-kaja">
+                            <img src="https://receptmegoszto.hu/keptar_receptek/579.jpg" alt="Gulyásleves">
+                            <h2>Csokiba mártott tücskök</h2>
+                            <h4>4500 HUF</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -166,7 +249,8 @@
         <section id="asztal" class="asztal">
             <div class="fejlec">
                 <h1>Asztalfogalalás</h1>
-                <h2>Menj biztosra, foglalj asztalt! Lefoglalható asztalok: <span id="lefoglalhato" class="deactive">16</span> db</h2>
+                <h2>Menj biztosra, foglalj asztalt! Lefoglalható asztalok: <span id="lefoglalhato"
+                        class="deactive">16</span> db</h2>
             </div>
 
             <div id="urlap-box">
@@ -224,7 +308,7 @@
 
                 </form>
             </div>
-            <button type="button" class="lefoglalom">Lefogalom</button>
+            <button type="button" class="lefoglalom" onclick="dominik()">Lefogalom</button>
         </section>
 
 
@@ -233,11 +317,14 @@
             <h2>Vagy jelezze problémáját!</h2>
             <div class="elerhetoseg-container">
                 <div class="elerhetoseg-text">
-                    <p>Keressen minket telefonon: <br> +36 69 420 6969</p>
-                    <p>Írjon nekünk emailt! <br> trojai@falo.hu</p>
-                    <p >Vagy jöjjön be hozzánk személyesen! <br> Cotton Fld, Hatfield, GB</p>
+                    <p>Keressen minket telefonon: <br> <a href="tel:+36 69 420 6969">+36 69 420 6969</a></p>
+                    <p>Írjon nekünk emailt! <br> <a href="mailto:trojai@falo.hu">trojai@falo.hu</a></p>
+                    <p>Vagy jöjjön be hozzánk személyesen! <br> Cotton Fld, Hatfield, GB</p>
                 </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.220071469632!2d-0.2215971195403255!3d51.76687133805243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48763c9ded3294bb%3A0xbb0fe2692526525e!2zQ290dG9uIEZsZCwgSGF0ZmllbGQsIEVneWVzw7xsdCBLaXLDoWx5c8OhZw!5e0!3m2!1shu!2shu!4v1667937485652!5m2!1shu!2shu" width="60%" height="400vh" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.220071469632!2d-0.2215971195403255!3d51.76687133805243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48763c9ded3294bb%3A0xbb0fe2692526525e!2zQ290dG9uIEZsZCwgSGF0ZmllbGQsIEVneWVzw7xsdCBLaXLDoWx5c8OhZw!5e0!3m2!1shu!2shu!4v1667937485652!5m2!1shu!2shu"
+                    width="60%" height="400vh" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 
@@ -261,11 +348,4 @@
     <script src="script.js"></script>
 </body>
 
-
-<!DOCTYPE html>
-<html lang="hu">
-
-<h2>Vagy jelezze problémáját!</h2>
-    <script src="script.js"></script>
-</body>
 </html>

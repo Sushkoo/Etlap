@@ -1,12 +1,12 @@
 //navbar
-function navresp(){
+function navresp() {
     var navbar = document.getElementById('navbar');
     var icon = document.getElementById('nav-hamburger');
 
     icon.onclick(navbar.classList.toggle('active'));
 }
 
-function resetnav(){
+function resetnav() {
     var navbar = document.getElementById('navbar');
     var icon = document.getElementById('nav-hamburger');
 
@@ -14,20 +14,20 @@ function resetnav(){
 }
 
 //sötétmód
-function darkmode(){
-    var body = document.getElementById('body')
+function darkmode() {
+    var body = document.getElementById('body');
     var sotet = document.getElementById('ejjel');
     var vilagos = document.getElementById('nappal');
     var napi_gomb = document.getElementById('napi-gomb');
     var asztal_szam = document.getElementById('lefoglalhato');
 
-    if(sotet.classList.contains('deactive')){
+    if (sotet.classList.contains('deactive')) {
         sotet.classList.replace('deactive', 'active');
         vilagos.classList.replace('active', 'deactive');
         body.classList.remove('active');
         napi_gomb.classList.remove('active');
         asztal_szam.classList.replace('active', 'deactive');
-    }else{
+    } else {
         vilagos.classList.replace('deactive', 'active');
         sotet.classList.replace('active', 'deactive');
         body.classList.add('active');
@@ -42,7 +42,19 @@ function darkmode(){
 //asztalok
 setInterval(asztalok, 5000);
 
-function asztalok(){
+function asztalok() {
     var t = Math.round(Math.random() * 20);
     document.getElementById("lefoglalhato").innerHTML = t;
 }
+
+function dominik() {
+    var dominik = document.getElementById('nev').value;
+    var body = document.getElementById('body');
+    if (dominik == 'dominik') {
+        body.style.backgroundImage = "url('kepek/dominik.jpg')";
+        body.style.backgroundSize = "contain";
+    } else {
+        body.style.backgroundImage = "none";
+    }
+}
+
