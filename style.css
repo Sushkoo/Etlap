@@ -416,7 +416,7 @@ section {
 
 .napi-kaja{
     text-align: center;
-    min-width: 7vw;
+    min-width: 100px;
     margin: 0px 0.5vw;
     background-color: #FFB549;
     box-shadow: 0.2vw 0.5vw 10px rgba(0, 0, 0, 0.2);
@@ -424,6 +424,10 @@ section {
     height: 85%;
     transition: 0.1s;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1.5vh;
 }
 .napi-kaja:hover{
     background-color: #FFA400;
@@ -434,9 +438,10 @@ section {
     border-radius: 15px 15px 0 0;
 }
 .napi-kaja h2{
-    font-size: 0.85vw;
+    font-size: calc(10px + 0.2vw);
     font-weight: bold;
     text-align: center;
+    padding: 2px;
 }
 .napi-kaja h4{
     font-size: 0.7vw;
