@@ -36,10 +36,7 @@ function darkmode() {
     }
 }
 
-//Scroll
-//ScrollReveal().reveal('.fooldal-szoveg, .fooldal-kep, .gomb', {delay: 200, easing: "eas-out", interval: 200, scale: 1.2})
-
-//asztalok
+//asztalfoglalás
 setInterval(asztalok, 5000);
 
 function asztalok() {
@@ -55,26 +52,25 @@ function dominik() {
     var idopont = document.getElementById('idopont').value;
     var letszam = document.getElementById('letszam').value;
     var body = document.getElementById('body');
-    if (nev == 'dominik') {
+    if (nev.toLowerCase() == 'dominik') {
         body.style.backgroundImage = "url('kepek/dominik.jpg')";
         body.style.backgroundSize = "contain";
     } else {
         body.style.backgroundImage = "none";
     }
-    document.getElementsByClassName('vegso-nev')[0].innerHTML=nev;
-    document.getElementsByClassName('vegso-email')[0].innerHTML=email;
-    document.getElementsByClassName('vegso-tel')[0].innerHTML=tel;
-    document.getElementsByClassName('vegso-ido')[0].innerHTML=datum + " " + idopont;
-    document.getElementsByClassName('vegso-letszam')[0].innerHTML=letszam;
-    document.querySelectorAll(`#asztal table`)[0].style.display="none";
-    document.querySelectorAll(`#asztal table`)[1].style.display="none";
-    document.getElementsByClassName('vegso')[0].style.display="block";
-    document.getElementsByClassName('lefoglalom')[0].style.display="none";
-    
+    document.getElementsByClassName('vegso-nev')[0].innerHTML = nev;
+    document.getElementsByClassName('vegso-email')[0].innerHTML = email;
+    document.getElementsByClassName('vegso-tel')[0].innerHTML = tel;
+    document.getElementsByClassName('vegso-ido')[0].innerHTML = datum + " " + idopont;
+    document.getElementsByClassName('vegso-letszam')[0].innerHTML = letszam;
+    document.querySelectorAll(`#asztal table`)[0].style.display = "none";
+    document.querySelectorAll(`#asztal table`)[1].style.display = "none";
+    document.getElementsByClassName('vegso')[0].style.display = "block";
+    document.getElementsByClassName('lefoglalom')[0].style.display = "none";
+
 }
 
-
-// Napi menü rádiógombok
+//Napi menü
 function chosen(bevitel) {
     var szulo = bevitel.parentElement;
     var gyerekek = document.querySelectorAll(`.${szulo.classList[0]} *`);
@@ -86,7 +82,7 @@ function chosen(bevitel) {
         }
         bevitel.classList.add('chosen');
     }
-    
+
     if (document.querySelectorAll(`.napi-oszlop-jobb .${szulo.classList[0]} .chosen`)[0]) {
         document.querySelectorAll(`.napi-oszlop-bal .${szulo.classList[0]}`)[0].style.backgroundColor = "lightgreen";
     } else {
@@ -106,7 +102,12 @@ function chosen(bevitel) {
 function megrendeles() {
     var megrendelt_text = document.querySelectorAll(`.chosen h2`);
     var megrendelt_osszeg = document.querySelectorAll(`.chosen h4`);
-    var osszeg = megrendelt_osszeg[0].innerText.slice(0,-4) + "+" + megrendelt_osszeg[1].innerText.slice(0,-4) + "+" + megrendelt_osszeg[2].innerText.slice(0,-4);
+    var osszeg = megrendelt_osszeg[0].innerText.slice(0, -4) + "+" + megrendelt_osszeg[1].innerText.slice(0, -4) + "+" + megrendelt_osszeg[2].innerText.slice(0, -4);
     alert(`Sikeresen megrendelted a következőket: \n${megrendelt_text[0].innerText}, ${megrendelt_text[1].innerText}, ${megrendelt_text[2].innerText}\nFizetendő összeg: ${eval(osszeg)} HUF`);
 }
 
+
+//Támogatás
+function notworking() {
+    alert("Ez a funkció jelenleg még nem elérhető, de már dolgozunk rajta!")
+}
