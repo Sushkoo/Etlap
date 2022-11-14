@@ -63,8 +63,8 @@ function dominik() {
     document.getElementsByClassName('vegso-tel')[0].innerHTML = tel;
     document.getElementsByClassName('vegso-ido')[0].innerHTML = datum + " " + idopont;
     document.getElementsByClassName('vegso-letszam')[0].innerHTML = letszam;
-    document.querySelectorAll(`#asztal table`)[0].style.display = "none";
-    document.querySelectorAll(`#asztal table`)[1].style.display = "none";
+    document.querySelectorAll(`.asztal table`)[0].style.display = "none";
+    document.querySelectorAll(`.asztal table`)[1].style.display = "none";
     document.getElementsByClassName('vegso')[0].style.display = "block";
     document.getElementsByClassName('lefoglalom')[0].style.display = "none";
 
